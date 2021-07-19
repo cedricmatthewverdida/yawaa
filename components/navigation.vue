@@ -43,12 +43,13 @@
 
         <v-container>
             <v-list rounded>
-                <v-list-item>
+                <v-list-item @click="logout_metamask()">
                 <v-list-item-action>
-                    <v-icon>mdi-account</v-icon>
+                    <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.2757 6H27.7303C28.9282 6 29.8993 6.97112 29.8993 8.16906V25.1413C29.8993 25.958 29.5312 26.7312 28.8972 27.246L21.0285 33.636C20.431 34.1213 19.575 34.1213 18.9775 33.636L11.1088 27.246C10.4748 26.7312 10.1067 25.958 10.1067 25.1413V8.16906C10.1067 6.97112 11.0778 6 12.2757 6Z" fill="#1273EA"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M25.0189 9.25359C25.9174 9.25359 26.6457 9.98193 26.6457 10.8804V16.1277L26.6452 16.1706C26.6227 17.2407 25.7595 18.1041 24.6895 18.1269L24.646 18.1274L24.6889 18.1279C25.759 18.1504 26.6224 19.0136 26.6452 20.0837L26.6457 20.1271V23.4095C26.6457 23.8765 26.445 24.3209 26.0948 24.6297L22.0083 28.2327L22.0083 20.8791C22.0083 19.9806 21.28 19.2523 20.3815 19.2523H17.9976L17.9975 28.2327L13.9112 24.6297C13.5609 24.3209 13.3602 23.8765 13.3602 23.4095V10.8804C13.3602 9.98193 14.0886 9.25359 14.987 9.25359H25.0189ZM22.0083 11.5033H17.9976V16.5026H20.3815C21.28 16.5026 22.0083 15.7743 22.0083 14.8758V11.5033Z" fill="white"></path></svg>
+                    
                 </v-list-item-action>
                 <v-list-item-content>
-                    <v-list-item-title>Account</v-list-item-title>
+                    <v-list-item-title>Ronnin Wallet</v-list-item-title>
                 </v-list-item-content>
                 </v-list-item>
 
@@ -114,7 +115,7 @@
 
 <script>
     import { mapState,mapMutations } from 'vuex'
-    const Moralis = require("moralis")
+    import Moralis from 'moralis'
     export default {
         
         computed:{
@@ -150,7 +151,7 @@
             items: [
                 {
                 icon: 'mdi-account',
-                title: 'Account',
+                title: 'Ronin Address',
                 to: '/account'
                 },
                 {
@@ -162,7 +163,7 @@
             miniVariant: true,
             right: false,
             rightDrawer: false,
-            title: 'Yawa'
+            title: 'Axie Overload'
             }
         },
         filters:{
@@ -186,7 +187,6 @@
             async logout_metamask() {
                 await Moralis.User.logOut();
                 this.authorize_loggin([]);
-                console.log("logged out");
                 this.$router.push('/')
             }
         }

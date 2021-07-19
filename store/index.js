@@ -14,7 +14,6 @@ export const state = () => ({
 export const getters ={
 
     check_axie_exist_in_cart: (state) => (id) => {
-        // return state.cart.length != 0 ? state.cart.find( s => s.id == id) : -1;
         return _.find(state.cart, function(o) { return o.id == id; })
     },
 }
@@ -103,9 +102,9 @@ export const actions = {
 
 
     nuxtClientInit ({ commit }, { req }) {
-        Moralis.initialize("4qbZHWL8fGpAttgD4oOt51ZPmIh4hbRi81oHfnDy","rcgPriOa7YhGvJ5IPtwpOrbLS2h8MH64QU5VIcRD");
-        Moralis.serverURL = "https://inutj0ogpf1e.usemoralis.com:2053/server"
-        Moralis.Web3.getSigningData = () => 'Welcome to Madafaking Axie Infinity Wadafak!'
+        Moralis.initialize("a5P0TrsV84ayG0Y42UIaF1C56e5BShjXPxw4mL9V","sHTkZ3tfLBU8PJZN7OZXIQVT56nJrBE25JGxW8wt");
+        Moralis.serverURL = "https://oq8jfieaetke.usemoralis.com:2053/server"
+        Moralis.Web3.getSigningData = () => 'Welcome to Axie Overload'
 
         const currentUser =  Moralis.User.current();
         if (currentUser) {

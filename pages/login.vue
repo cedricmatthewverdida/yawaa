@@ -20,7 +20,7 @@
             
             <v-btn
             class="mt-2 glass_effect"
-            block
+            
             x-large
             rounded
             :loading="authorize"
