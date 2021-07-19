@@ -220,7 +220,7 @@
         }
     },
     mounted(){
-      this.currency_price();
+      // this.currency_price();
     }
   }
 </script>
