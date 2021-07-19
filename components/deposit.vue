@@ -180,7 +180,7 @@
             return startDigit+"..."+lastDigit
         },
         async currency_price(){
-          const send = await this.$axios.get('/cryptoprice');
+          const send = await this.$axios.get('https://api.nomics.com/v1/currencies/ticker?key=0d187e865fb86612dbe90fa340f4d5c89edc1d74&interval=1d&quote-currency=USD&ids=ETH,WETH');
           const respo = await send.data;
           this.price = respo;
         },
