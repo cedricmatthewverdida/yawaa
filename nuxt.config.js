@@ -45,6 +45,7 @@ export default {
 
   axios: {
     // proxyHeaders: false
+    proxy: true
   },
 
   proxy: {
