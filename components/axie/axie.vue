@@ -328,7 +328,7 @@
             load_axies: _.debounce(async function(id,price){
             this.axie = []
             this.axieprice = 0
-            const response = await this.$axios.post('/axie',
+            const response = await this.$axios.post('https://axieinfinity.com/graphql-server-v2/graphql',
                 {
                     "operationName":"GetAxieDetail",
                     "variables":{

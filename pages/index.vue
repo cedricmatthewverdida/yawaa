@@ -456,7 +456,7 @@
             
             if(this.Clear == false){
             this.axie = []
-            const response = await this.$axios.post('/axie',
+            const response = await this.$axios.post('https://axieinfinity.com/graphql-server-v2/graphql',
                 {
                 "operationName":"GetAxieBriefList",
                 "variables":{
