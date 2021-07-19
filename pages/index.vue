@@ -530,8 +530,8 @@
         },
         
         mounted(){
-        //   this.load_axies();
-          this.currency_price();
+          this.load_axies();
+        //   this.currency_price();
         }
         
     }
