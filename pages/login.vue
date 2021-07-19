@@ -34,7 +34,7 @@
 
 <script>
     import { mapState,mapActions } from 'vuex'
-    import Moralis from 'moralis';
+    const Moralis = require("moralis")
     export default {
 
         head: {

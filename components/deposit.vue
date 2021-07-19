@@ -131,7 +131,7 @@
 
 <script>
   import { mapState,mapMutations } from 'vuex'
-  import Moralis from 'moralis'
+  const Moralis = require("moralis")
   export default {
     data: () => ({
       dialog: false,

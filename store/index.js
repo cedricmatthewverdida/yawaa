@@ -1,4 +1,4 @@
-import Moralis from 'moralis';
+const Moralis = require("moralis")
 import _ from 'lodash';
 export const state = () => ({
     user:[],
