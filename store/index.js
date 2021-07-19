@@ -103,7 +103,7 @@ export const actions = {
 
 
     nuxtClientInit ({ commit }, { req }) {
-        Moralis.initialize("4qbZHWL8fGpAttgD4oOt51ZPmIh4hbRi81oHfnDy");
+        Moralis.initialize("4qbZHWL8fGpAttgD4oOt51ZPmIh4hbRi81oHfnDy","rcgPriOa7YhGvJ5IPtwpOrbLS2h8MH64QU5VIcRD");
         Moralis.serverURL = "https://inutj0ogpf1e.usemoralis.com:2053/server"
         Moralis.Web3.getSigningData = () => 'Welcome to Madafaking Axie Infinity Wadafak!'
 
